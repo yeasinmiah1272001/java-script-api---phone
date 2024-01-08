@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section>
+      <!-- navbar -->
+      <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+          <div class="text-white font-bold text-lg">Phone Shop</div>
+          <div class="space-x-4">
+            <a href="#" class="text-white hover:text-gray-300">Home</a>
+            <a href="#" class="text-white hover:text-gray-300">Products</a>
+            <a href="#" class="text-white hover:text-gray-300">About</a>
+            <a href="#" class="text-white hover:text-gray-300">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- search -->
+
+      <div class="bg-gray-300 p-4 f">
+        <div class="container mx-auto flex items-center">
+          <input
+            id="input-field"
+            type="text"
+            placeholder="Search your phone name"
+            class="w-64 border-b-2 border-gray-300 p-2 focus:outline-none focus:border-blue-500 text-black-500"
+          />
+          <button
+            onclick="handleSearch()"
+            class="ml-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="title"
+        class="max-w-sm mx-auto bg-red-50 p-1 shadow-md rounded-md"
+      >
+        <h1 class="text-xl font-semibold mb-2">Brand Name</h1>
+        <ul class="list-disc pl-4">
+          <li>Samsung</li>
+          <li>Oppo</li>
+          <li>iPhone</li>
+        </ul>
+      </div>
+
+      <!-- phones -->
+      <div id="phones-container" class="grid lg:grid-cols-4 gap-10 mt-10"></div>
+      <!-- showAll-button -->
+
+      <div class="max-w-sm mx-auto text-center m-8">
+        <button
+          id="show-allBtn"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden mx-auto"
+        >
+          Show All
+        </button>
+      </div>
+    </section>
+
+    <!-- modal -->
+    <div>
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="">open modal</button> -->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div id="modal-details">
+         
+        </div>
+      </dialog>
+    </div>
+
+    <script src="fetch.js"></script>
+  </body>
+</html>
